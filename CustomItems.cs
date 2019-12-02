@@ -105,8 +105,8 @@ namespace CustomItems {
                 "usetime, shoot, shootspeed, width, height, scale, ammo, useammo, notammo.");
                 return;
             }
-
-            List<TSPlayer> players = TShock.Utils.FindPlayer(args.Parameters[0]);
+            //Utils.FindPlayer is outdated therefore doesn't work, TSPlayer.FindByNameOrID works.
+            List<TSPlayer> players = TSPlayer.FindByNameOrID(args.Parameters[0]);
             if (players.Count != 1) {
                 args.Player.SendErrorMessage("Failed to find player of: " + args.Parameters[0]);
                 return;
