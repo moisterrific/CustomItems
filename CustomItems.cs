@@ -162,7 +162,7 @@ namespace CustomItems {
 
             TSPlayer.All.SendData(PacketTypes.TweakItem, "", itemIndex, 255, 63);
             var plr = players[0];
-            player.SendSuccessMessage(string.Format("Gave {0} {1} custom {2}(s).", plr.Name, item.stack, item.Name));
+            args.Player.SendSuccessMessage(string.Format("Gave {0} {1} custom {2}(s).", plr.Name, item.stack, item.Name));
             plr.SendSuccessMessage(string.Format("{0} gave you {1} custom {2}(s).", args.Player.Name, item.stack, item.Name));
         }
     }
